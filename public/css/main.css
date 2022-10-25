@@ -26,6 +26,17 @@ body {
   justify-content: space-between;
   align-items: center; }
 
+.btn-custom {
+  padding: 20px 30px;
+  border: 2px solid #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  color: #333333;
+  font-size: 13px;
+  margin: 0;
+  border-radius: 3px; }
+
 .site-header #custom-navbar {
   padding: 0; }
   .site-header #custom-navbar .custom-navbar-brand {
@@ -143,3 +154,14 @@ body {
         .media-wrapper .media-custom .media-content .media .media-body p {
           font-size: 13px;
           color: #666666; }
+
+.purchase-wrapper {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem; }
+  .purchase-wrapper .purchase {
+    justify-content: center;
+    gap: 50px; }
+    .purchase-wrapper .purchase p {
+      font-size: 1.25rem;
+      color: #333333;
+      margin-bottom: 0; }

@@ -51,6 +51,18 @@ body {
   align-items: center;
 }
 
+.btn-custom {
+  padding: 20px 30px;
+  border: 2px solid #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: $fontBold;
+  color: $titleColor;
+  font-size: $headerFontSize;
+  margin: 0;
+  border-radius: 3px;
+}
+
 .site-header {
   #custom-navbar {
     padding: 0;
@@ -161,7 +173,7 @@ body {
   .media-custom {
     flex-direction: column;
 
-    .media-description{
+    .media-description {
       text-align: center;
       width: 100%;
       max-width: 735px;
@@ -206,7 +218,6 @@ body {
           }
         }
         .media-body {
-
           .title {
             font-size: 1.125rem;
             font-weight: $fontBold;
@@ -218,6 +229,20 @@ body {
           }
         }
       }
+    }
+  }
+}
+.purchase-wrapper {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .purchase {
+    justify-content: center;
+    gap: 50px;
+
+    p {
+      font-size: 1.25rem;
+      color: $titleColor;
+      margin-bottom: 0;
     }
   }
 }
