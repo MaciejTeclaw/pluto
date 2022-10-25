@@ -15,7 +15,9 @@ $headerFontSize: 13px;
 $fontRegular: 400;
 $fontBold: 600;
 
-$sectionMargin: 3.5rem;
+$iconColor: #ffffff;
+
+$sectionPadding: 3.5rem;
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -40,6 +42,7 @@ body {
   letter-spacing: normal;
   margin-bottom: 0;
   font-size: 2rem;
+  color: $titleColor;
 }
 
 .flex-custom {
@@ -117,8 +120,8 @@ body {
   }
 }
 .board-wrapper {
-  margin-top: $sectionMargin;
-  margin-bottom: 1.25rem;
+  padding-top: $sectionPadding;
+  padding-bottom: 1.25rem;
 
   .board {
     align-items: flex-start;
@@ -138,7 +141,6 @@ body {
 
       .title {
         font-size: 1.125rem;
-        color: $titleColor;
         font-weight: $fontBold;
         margin-bottom: 1.5rem;
       }
@@ -151,9 +153,71 @@ body {
   }
 }
 .media-wrapper {
+  padding-top: $sectionPadding;
+  padding-bottom: 1.375rem;
+  margin-top: $sectionPadding;
   background-color: $secondBgColor;
 
-  .media-content {
-    
+  .media-custom {
+    flex-direction: column;
+
+    .media-description{
+      text-align: center;
+      width: 100%;
+      max-width: 735px;
+      flex-direction: column;
+
+      span {
+        font-size: $headerFontSize;
+        text-transform: uppercase;
+        color: #999999;
+        letter-spacing: 1.3px;
+        font-weight: $fontBold;
+      }
+      h2 {
+        margin-top: 1.875rem;
+      }
+      p {
+        margin-top: 1.375rem;
+        font-size: 1.125rem;
+        color: $textColor;
+        line-height: 1.67;
+      }
+    }
+    .media-content {
+      margin-top: 4.25rem;
+      flex-wrap: wrap;
+
+      .media {
+        width: 100%;
+        max-width: 364px;
+        margin-bottom: 2.875rem;
+
+        .icon-wrapper {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: $thirdAddedColor;
+          margin-right: 20px;
+          justify-content: center;
+
+          .fa-solid {
+            color: $iconColor;
+          }
+        }
+        .media-body {
+
+          .title {
+            font-size: 1.125rem;
+            font-weight: $fontBold;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: $headerFontSize;
+            color: $textColor;
+          }
+        }
+      }
+    }
   }
 }
