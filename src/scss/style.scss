@@ -40,12 +40,15 @@ $sectionPadding: 3.5rem;
   }
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   background-color: $mainBgColor;
-  font-size: 16px;
 }
 
 p {
@@ -122,10 +125,10 @@ p {
           }
         }
         .form-inline {
-          display: none;
           padding: 0 0 0.5rem 0;
           input,
           button {
+            display: none;
             font-size: $additionalFontSize;
             font-weight: $fontBold;
             text-transform: uppercase;
@@ -340,6 +343,8 @@ p {
   }
 }
 .site-footer {
+  position: relative;
+
   .follow-us-wrapper {
     background-color: $firstAdditionalColor;
     padding-top: calc(#{$sectionPadding} - 2.25rem);
@@ -414,7 +419,7 @@ p {
               content: '\f1d8';
               position: absolute;
               top: 17px;
-              left: -5px;
+              left: 0px;
               transition: all 300ms ease;
               color: transparent;
             }
@@ -422,7 +427,7 @@ p {
             &:hover {
               &:before {
                 left: 9px;
-                color: white;
+                color: $secondTextColor;
               }
               span {
                 transform: translateX(10px);
@@ -498,6 +503,25 @@ p {
       }
     }
   }
+  .to-top {
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    background-color: $thirdAdditionalColor;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.875rem;
+    right: 1.875rem;
+    opacity: 0.6;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .arrow {
+      color: $iconColor;
+    }
+  }
 }
 @media (max-width: 1199.98px) {
   .container,
@@ -529,6 +553,17 @@ p {
   }
 }
 @media (max-width: 991.98px) {
+  .site-header {
+    .navbar-wrapper {
+      .navbar {
+        .custom-navbar {
+          .search-icon {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
   .site-footer {
     .follow-us-wrapper {
       .follow-us {
@@ -540,6 +575,9 @@ p {
   }
 }
 @media (max-width: 767.98px) {
+  html{
+    font-size: 15px;
+  }
   .media-wrapper {
     .media-custom {
       .media-content {
@@ -567,4 +605,5 @@ p {
   }
 }
 @media (max-width: 575.98px) {
+
 }

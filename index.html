@@ -11,9 +11,11 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/f32579ab4b.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+		<script src="/public/js/main.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -26,7 +28,7 @@
 						<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#custom-navbar" aria-controls="custom-navbar" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="custom-navbar collapse navbar-collapse" id="custom-navbar"">
+						<div class="custom-navbar collapse navbar-collapse" id="custom-navbar">
 							<ul class="navbar-nav">
 								<li class="nav-item">
 									<a class="nav-link" href="#">Home</a>
@@ -54,11 +56,11 @@
 								<li class="nav-item">
 									<a class="nav-link" href="#">Contact</a>
 								</li>
-								<form class="form-inline">
+								<form class="search-bar form-inline">
 									<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 									<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 								  </form>
-								<span class="nav-link fas fa-search"></span>
+								<span class="search-icon nav-link fas fa-search"></span>
 							</ul>
 						</div>
 					</nav>
@@ -233,6 +235,9 @@
 					</div>
 				</div>
 			</section>
+			<div class="to-top flex-custom">
+				<span class="arrow fa-solid fa-chevron-up fa-2xl"></span>
+			</div>
 		</footer>
 	</body>
 </html>
