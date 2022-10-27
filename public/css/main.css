@@ -5,6 +5,9 @@ body {
   background-color: #ffffff;
   font-size: 16px; }
 
+p {
+  margin-bottom: 0; }
+
 .container {
   width: 100%;
   padding-right: 0;
@@ -29,13 +32,15 @@ body {
 .btn-custom {
   padding: 20px 30px;
   border: 2px solid #cccccc;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 600;
   color: #333333;
-  font-size: 13px;
   margin: 0;
   border-radius: 3px; }
+
+.font-custom {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  font-weight: 600; }
 
 .site-header #custom-navbar {
   padding: 0; }
@@ -76,16 +81,14 @@ body {
       font-size: 13px;
       padding-left: 0.25rem; }
     .site-header .breadcrumbs-wrapper #breadcrumbs-custom .breadcrumb-custom .breadcrumb-item + .active {
-      color: #ffffff;
-      opacity: 0.4; }
+      color: rgba(255, 255, 255, 0.4); }
       .site-header .breadcrumbs-wrapper #breadcrumbs-custom .breadcrumb-custom .breadcrumb-item + .active:before {
-        color: #ffffff;
-        padding-right: 0.25rem;
-        opacity: 0.4; }
+        color: rgba(255, 255, 255, 0.4);
+        padding-right: 0.25rem; }
 
 .board-wrapper {
   padding-top: 3.5rem;
-  padding-bottom: 1.25rem; }
+  padding-bottom: calc(3.5rem - 2.25rem); }
   .board-wrapper .board {
     align-items: flex-start; }
     .board-wrapper .board-image {
@@ -108,7 +111,7 @@ body {
 
 .media-wrapper {
   padding-top: 3.5rem;
-  padding-bottom: 1.375rem;
+  padding-bottom: calc(3.5rem - 2.125rem);
   margin-top: 3.5rem;
   background-color: #f5f5f5; }
   .media-wrapper .media-custom {
@@ -119,11 +122,7 @@ body {
       max-width: 735px;
       flex-direction: column; }
       .media-wrapper .media-custom .media-description span {
-        font-size: 13px;
-        text-transform: uppercase;
-        color: #999999;
-        letter-spacing: 1.3px;
-        font-weight: 600; }
+        color: #999999; }
       .media-wrapper .media-custom .media-description h2 {
         margin-top: 1.875rem; }
       .media-wrapper .media-custom .media-description p {
@@ -160,8 +159,91 @@ body {
   padding-bottom: 3.5rem; }
   .purchase-wrapper .purchase {
     justify-content: center;
-    gap: 50px; }
+    gap: 3.125rem; }
     .purchase-wrapper .purchase p {
       font-size: 1.25rem;
-      color: #333333;
-      margin-bottom: 0; }
+      color: #333333; }
+
+.site-footer .follow-us-wrapper {
+  background-color: #453951;
+  padding-top: calc(3.5rem - 2.25rem);
+  padding-bottom: calc(3.5rem - 2.25rem); }
+  .site-footer .follow-us-wrapper p {
+    color: rgba(255, 255, 255, 0.4); }
+  .site-footer .follow-us-wrapper .follow-us .social-media {
+    justify-content: flex-start;
+    gap: 1.875rem; }
+    .site-footer .follow-us-wrapper .follow-us .social-media .social-media-icons {
+      justify-content: flex-start;
+      gap: 1rem; }
+      .site-footer .follow-us-wrapper .follow-us .social-media .social-media-icons .social-media-icon {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; }
+        .site-footer .follow-us-wrapper .follow-us .social-media .social-media-icons .social-media-icon .fa-brands {
+          color: #ffffff; }
+  .site-footer .follow-us-wrapper .follow-us .newsletter {
+    justify-content: flex-end;
+    gap: 1.875rem; }
+    .site-footer .follow-us-wrapper .follow-us .newsletter-form {
+      justify-content: flex-end;
+      gap: 0.625rem; }
+      .site-footer .follow-us-wrapper .follow-us .newsletter-form input {
+        width: 100%;
+        max-width: 254px;
+        border: solid 2px rgba(255, 255, 255, 0.4);
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 10px 15px;
+        color: rgba(255, 255, 255, 0.4); }
+      .site-footer .follow-us-wrapper .follow-us .newsletter-form .btn-custom {
+        padding: 15px 19px;
+        background-color: #ea623d;
+        color: #ffffff;
+        border: none; }
+
+.site-footer .data-wrapper {
+  background-color: #2a272e;
+  padding-top: 3.5rem;
+  padding-bottom: calc(3.5rem + 2rem); }
+  .site-footer .data-wrapper .data {
+    align-items: flex-start;
+    gap: 2rem; }
+    .site-footer .data-wrapper .data .footer_col {
+      flex-grow: 1;
+      flex-basis: 0; }
+      .site-footer .data-wrapper .data .footer_col h4 {
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 1.875rem; }
+      .site-footer .data-wrapper .data .footer_col a {
+        color: #ea623d;
+        text-decoration: none; }
+      .site-footer .data-wrapper .data .footer_col p {
+        font-size: 0.875rem;
+        line-height: 1.57;
+        color: #cccccc; }
+      .site-footer .data-wrapper .data .footer_col:first-child {
+        opacity: 0.2;
+        color: #ffffff; }
+        .site-footer .data-wrapper .data .footer_col:first-child img {
+          margin-bottom: 1.875rem; }
+        .site-footer .data-wrapper .data .footer_col:first-child p {
+          color: #ffffff;
+          line-height: 2.14; }
+      .site-footer .data-wrapper .data .footer_col .tweet-date {
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 2.09;
+        letter-spacing: 1.1px;
+        color: #545158; }
+    .site-footer .data-wrapper .data .footer_col + address a {
+      font-size: 1.275rem;
+      font-weight: 600; }
+    .site-footer .data-wrapper .data .footer_col + address p:first-of-type {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
