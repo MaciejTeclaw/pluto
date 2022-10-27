@@ -20,6 +20,26 @@ $iconColor: #ffffff;
 
 $sectionPadding: 3.5rem;
 
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -30,6 +50,12 @@ body {
 
 p {
   margin-bottom: 0;
+}
+
+.form-control:focus,
+.form-control:active {
+  box-shadow: none;
+  border-color: unset;
 }
 
 .container {
@@ -85,30 +111,81 @@ p {
     }
     .custom-navbar {
       justify-content: flex-end;
-
-      ul {
+      .navbar-nav {
         align-items: center;
         text-transform: uppercase;
-        a {
-          color: $textColor;
-          font-weight: $fontBold;
-          font-size: $additionalFontSize;
-          padding-right: 1rem;
-          padding-left: 1rem;
 
-          &:hover {
-            color: $titleColor;
+        .dropdown {
+          a {
+            font-weight: $fontBold;
+            font-size: $additionalFontSize;
           }
         }
-        .active {
-          color: $titleColor;
+        .form-inline {
+          display: none;
+          padding: 0 0 0.5rem 0;
+          input,
+          button {
+            font-size: $additionalFontSize;
+            font-weight: $fontBold;
+            text-transform: uppercase;
+          }
+          button {
+            color: $thirdAdditionalColor;
+            border-color: $thirdAdditionalColor;
+
+            &:hover {
+              color: $secondTextColor;
+              background-color: $thirdAdditionalColor;
+            }
+          }
         }
         .fas {
           color: $textColor;
+          padding: 0 0 0.5rem 0;
+          margin-left: 1rem;
 
           &:hover {
             color: $titleColor;
             cursor: pointer;
+          }
+        }
+      }
+      .navbar-nav > {
+        li > {
+          a {
+            color: $textColor;
+            font-weight: $fontBold;
+            font-size: $additionalFontSize;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            padding: 0 0 0.5rem 0;
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              border-radius: 2px;
+              background-color: $thirdAdditionalColor;
+              bottom: 0;
+              left: 0;
+              transform-origin: right;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+            &:hover {
+              color: $titleColor;
+
+              &:before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+            }
+          }
+          .active {
+            color: $titleColor;
           }
         }
       }
@@ -254,6 +331,12 @@ p {
       font-size: 1.25rem;
       color: $titleColor;
     }
+
+    .btn-custom {
+      &:hover {
+        animation: bounce 0.8s;
+      }
+    }
   }
 }
 .site-footer {
@@ -275,6 +358,7 @@ p {
           justify-content: flex-start;
           gap: 1rem;
           .social-media-icon {
+            position: relative;
             height: 50px;
             width: 50px;
             border-radius: 50%;
@@ -283,6 +367,12 @@ p {
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            transition: 0.4s;
+
+            &:hover {
+              background-color: $thirdAdditionalColor;
+              transition: 0.4s;
+            }
 
             .fa-brands {
               color: $iconColor;
@@ -312,6 +402,33 @@ p {
             background-color: $thirdAdditionalColor;
             color: $secondTextColor;
             border: none;
+            position: relative;
+
+            span {
+              display: block;
+              transition: all 300ms ease;
+            }
+
+            &:before {
+              font-family: FontAwesome;
+              content: '\f1d8';
+              position: absolute;
+              top: 17px;
+              left: -5px;
+              transition: all 300ms ease;
+              color: transparent;
+            }
+
+            &:hover {
+              &:before {
+                left: 9px;
+                color: white;
+              }
+              span {
+                transform: translateX(10px);
+                transition: all 300ms ease;
+              }
+            }
           }
         }
       }
