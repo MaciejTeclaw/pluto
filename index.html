@@ -19,39 +19,44 @@
 		<header class="site-header">
 			<div class="navbar-wrapper">
 				<div class="container">
-					<nav class="row navbar navbar-expand-lg flex-custom" id="custom-navbar">
+					<nav class="row navbar navbar-expand-lg flex-custom" >
 						<a class="navbar-brand custom-navbar-brand" href="#">
 							<img src="/public/images/header_logo.png" alt="Logo">
 						</a>
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">About</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a class="dropdown-item" href="#">Subpage 1</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Subpage 2</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Subpage 3</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Blog</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
-							<span class="fas fa-search"></span>
-						</ul>
+						<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#custom-navbar" aria-controls="custom-navbar" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="custom-navbar collapse navbar-collapse" id="custom-navbar"">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#">About</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">Subpage 1</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Subpage 2</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Subpage 3</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Blog</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contact</a>
+								</li>
+								<span class="nav-link fas fa-search"></span>
+							</ul>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -215,7 +220,7 @@
 						</div>
 						<div class="footer_col footer-photostream">
 							<h4 class="font-custom">Photostream</h4>
-							<div class="flex-custom">
+							<div class="photostream-container flex-custom">
 								<img src="public/images/footer_image.png">
 								<img src="public/images/footer_image.png">
 								<img src="public/images/footer_image.png">
